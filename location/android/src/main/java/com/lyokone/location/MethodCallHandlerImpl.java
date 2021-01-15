@@ -169,7 +169,8 @@ final class MethodCallHandlerImpl implements MethodCallHandler {
             } else {
                 if (enable) {
                     locationService.setResult(result);
-                    locationService.requestBackgroundPermissions();
+                    // TODO: we shouldn't need this for just 'while in use' mode, this should be made optional IMHO
+                    /*locationService.requestBackgroundPermissions();*/ locationService.enableBackgroundMode();
                 } else {
                     locationService.disableBackgroundMode();
 
