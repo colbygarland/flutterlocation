@@ -177,7 +177,8 @@ final class MethodCallHandlerImpl implements MethodCallHandler {
             } else {
                 if (enable) {
                     locationService.setResult(result);
-                    locationService.requestBackgroundPermissions();
+                    //locationService.requestBackgroundPermissions();
+                    locationService.enableBackgroundMode();
                 } else {
                     locationService.disableBackgroundMode();
 
